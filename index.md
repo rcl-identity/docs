@@ -41,7 +41,7 @@ The unique identifier for the person's Digital ID will be stored in the ``Object
 # Single Sign-On
 A person with a Digital Identity will utilize [Single Sign-On](https://learn.microsoft.com/en-us/azure/active-directory-b2c/custom-policy-reference-sso) provided by AAD B2C IdP to sign in to multiple web sites using the same sign-in credentials.
 
-Single Sign-On is compliant with the [Open ID](https://learn.microsoft.com/en-us/azure/active-directory-b2c/openid-connect) specification. Using tOpen ID, the Digital ID issuing organization can set up single sign-on on multiple regional and international websites it directly controls. 
+Single Sign-On is compliant with the [Open ID](https://learn.microsoft.com/en-us/azure/active-directory-b2c/openid-connect) specification. Using Open ID, the Digital ID issuing organization can set up single sign-on on multiple regional and international websites it directly controls. 
 
 It can also allow its partners and external organizations (relying parties) to use its AD B2C as an eternal Identity Provider (external IdP) to sign in its users to external websites using the ``Client Credentials Grant`` described in the [OAuth2](https://www.rfc-editor.org/rfc/rfc6749) specification.
 
@@ -49,12 +49,12 @@ It can also allow its partners and external organizations (relying parties) to u
 
 The Digital ID issuing organization can set up single-factor authentication using username and password credentials.
 
-In addition, multi-factor authentication utilizing the time-based one-time password (TOTP) verification process. This is done using an **Authenticator Application** (eg: Google Authenticator, Microsoft Authenticator). The follows [NIST SP 800-63](https://nvlpubs.nist.gov/nistpubs/SpecialPublications/NIST.SP.800-63b.pdf) AAL2 Authenticator Assurance level.
+In addition, multi-factor authentication utilizing the time-based one-time password (TOTP) verification process is supported. This is done using an **Authenticator Application** (eg: Google Authenticator, Microsoft Authenticator). The follows [NIST SP 800-63](https://nvlpubs.nist.gov/nistpubs/SpecialPublications/NIST.SP.800-63b.pdf) AAL2 Authenticator Assurance level.
 
 
 # User Claims
 
-The AAD B2C Identity Provider will send the ``User Claims`` identified above in the [JWT](https://www.rfc-editor.org/rfc/rfc7519) tokens when a user signs in to a website. Using these claims, the relying parties to which the person's sign in will access the personal identification data of the signed in user. The relying party will use the ID data to make decisions about the user (eg. grant a service).
+The AAD B2C Identity Provider will send the ``User Claims`` identified above in the [JWT](https://www.rfc-editor.org/rfc/rfc7519) tokens when a user signs in to a website. Using these claims, the relying parties to which the person signs in will have access the Personally Identifiable Information (PII). The relying party will use the PII to make decisions about the user (eg. grant a service).
 
 # Standards Compliance
 
@@ -78,14 +78,14 @@ The organization will subscribe for the applicable cloud services provided by th
 
 ## Azure AD B2C
 
-The organization will create and administer an [Azure AD B2C](https://azure.microsoft.com/en-us/services/active-directory/external-identities/b2c/) directory that will act as an Identity Provider (IdP) and will use to store identity data for those people that they issue Digital IDs. The IdP will also provide single sign-on technology using OAuth2, SAML and OpenID.
+The organization will create and administer an [Azure AD B2C](https://azure.microsoft.com/en-us/services/active-directory/external-identities/b2c/) directory that will act as an Identity Provider (IdP) and will use it to store identity data for those people that they issue Digital IDs. The IdP will also provide single sign-on technology using OAuth2, SAML and OpenID.
 
 ## Identity Enrollment
-The organization will host the open-source [Identity Enrollment](https://github.com/rcladmin/RCL.Core/tree/master/src/RCL.Identity/RCL.Core.Identity.Enrollment) application as a Web App is its Azure subscription. It will have full control over this application.
+The organization will host the open-source [Identity Enrollment](https://github.com/rcladmin/RCL.Core/tree/master/src/RCL.Identity/RCL.Core.Identity.Enrollment) application as a Web App in its Azure subscription. It will have full control over this application.
 
 ## Identity Proofing
 
-The organization will host the open-source [Identity Proofing](https://github.com/rcladmin/RCL.Core/tree/master/src/RCL.Identity/RCL.Core.Identity.Proofing.Portal) application as a Web App is its Azure subscription. It will have full control over this application.
+The organization will host the open-source [Identity Proofing](https://github.com/rcladmin/RCL.Core/tree/master/src/RCL.Identity/RCL.Core.Identity.Proofing.Portal) application as a Web App in its Azure subscription. It will have full control over this application.
 
 ## RCL Identity SaaS application
 
