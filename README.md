@@ -1,6 +1,6 @@
 ﻿# RCL Identity Docs
 
-The documentation for the RCL Identity applications. 
+The documentation for the RCL Identity application. 
 
 View it online at: https://identity.docs.rclapp.com
 
