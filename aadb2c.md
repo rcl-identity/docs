@@ -58,7 +58,7 @@ Before an applications can interact with Azure AD B2C, it must be registered in 
 
 ![image](/images/aadb2c/app-registration4.png)
 
-- In the application, navigate to the ``Certificates & secrets page
+- In the application, navigate to the ``Certificates & secrets`` page
 
 - Add a new client secret
 
@@ -69,9 +69,9 @@ Before an applications can interact with Azure AD B2C, it must be registered in 
 ![image](/images/aadb2c/app-registration6.png)
 
 
-# Adding a Custom Attribute
+# Adding Custom Attribute
 
-Azure AD B2C does not contain a Built-in attribute for **Date of Birth**. We will add this as a custom attribute.
+Azure AD B2C does not contain a Built-in attributes for **Date of Birth** and **Identity Approver**. The Identity Approver attribute can be used by the organization to manage the approval of a user sign up among several different departments or approvers. We will add these as custom attributes.
 
 - Open the B2C tenant
 
@@ -82,6 +82,10 @@ Azure AD B2C does not contain a Built-in attribute for **Date of Birth**. We wil
 - Add the **Date of Birth** custom attribute 
 
 ![image](/images/aadb2c/attribute-add2.png)
+
+- Add the **Identity Approver** custom attribute
+
+![image](/images/aadb2c/attribute-add4.png)
 
 - Click the ``Create`` button when you are done
 
@@ -120,6 +124,7 @@ The sign up/ sign in workflow will allow the user to sign up for a Digital ID.
     - Email Address
     - Email Addresses
     - Given Name
+    - Identity Approver
     - Postal Code
     - State/Province
     - Street Address
@@ -143,6 +148,10 @@ The sign up/ sign in workflow will allow the user to sign up for a Digital ID.
 - Format the sign-up page user attributes as follows :
 
 ![image](/images/aadb2c/signup-layout2.png)
+
+- Add the available Identity Approver(s) as a dropdown select
+
+![image](/images/aadb2c/signup-layout6.png)
 
 - Click the ``Save`` icon when you are done
 
