@@ -68,6 +68,35 @@ Before an applications can interact with Azure AD B2C, it must be registered in 
 
 ![image](/images/aadb2c/app-registration6.png)
 
+# Access the Microsoft Graph
+
+The Microsoft Graph API provides programmatic access to AAD B2C users. We will configure the web application we created in the previous section to access the Microsoft Graph.
+
+- Open the AAD B2C tenant and open the web application
+
+![image](/images/aadb2c/ms-graph.png)
+
+- Open the ``API permissions`` page and click on the ``Add a permission`` link
+
+- Select the ``Microsoft Graph`` API
+
+![image](/images/aadb2c/ms-graph2.png)
+
+- Select ``Application permissions``
+
+![image](/images/aadb2c/ms-graph3.png)
+
+- Then, select the ``Directory.ReadWrite.All`` permission from the ``Directory`` API. Click the ``Add permissions`` button when you are done
+
+![image](/images/aadb2c/ms-graph4.png)
+
+- Click the ``Grant admin consent`` link 
+
+![image](/images/aadb2c/ms-graph5.png)
+
+- The web application can now access the Microsoft Graph
+
+![image](/images/aadb2c/ms-graph6.png)
 
 # Adding Custom Attribute
 
