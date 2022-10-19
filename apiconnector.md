@@ -53,11 +53,15 @@ Follow these steps to set the password :
 
 ![image](/images/apiconnector/identityapprover-create4.png)
 
-- Add a value and click the ``Submit`` button
+- Copy the **Application(client) ID** for the [Web Application](./aadb2c.md#register-a-web-application) you registered previously
+
+![image](/images/aadb2c/app-registration4.png)
+
+- Add the **Application(client) ID** value and click the ``Submit`` button
 
 ![image](/images/apiconnector/identityapprover-create5.png)
 
-- Use this **Client Id** as the password.
+- Use the **Client Id** as the password.
 
 ![image](/images/apiconnector/identityapprover-create6.png)
 
