@@ -1,6 +1,6 @@
 ---
 title: Create AAD B2C
-description: Creating and Azure AD B2C for the RCL Digital Identity Application.
+description: Creating an Azure AD B2C for the RCL Digital Identity Application.
 has_children: false
 nav_order: 3
 ---
