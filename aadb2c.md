@@ -5,7 +5,7 @@ has_children: false
 nav_order: 3
 ---
 
-# Introduction
+# Create AAD B2C
 **V7.0.0**
 
 In this section, we will create an Azure Active Directory B2C tenant for the RCL Digital Identity application.

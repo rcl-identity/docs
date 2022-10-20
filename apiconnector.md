@@ -5,7 +5,8 @@ has_children: false
 nav_order: 3
 ---
 
-# Introduction
+# API Connector
+**V7.0.0**
 
 After a person applies for a Digital ID using the Azure AD B2C sign-up page, their physical identity must be verified. The verification process may require the person to provide photo IDs to confirm their identity and date of birth. The purpose of the API Connector is to capture the user data on sign-up and provide the data to the RCL Identity Proofing application to conduct the identity verification process.
 

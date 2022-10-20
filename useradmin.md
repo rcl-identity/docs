@@ -5,7 +5,8 @@ has_children: false
 nav_order: 3
 ---
 
-# Introduction
+# User Admins
+**V7.0.0**
 
 A User Admin is a user account that has been assigned access to the Identity Proofing application to perform the identity verification process. In this section, we will learn how to create a user and add the user to the UserAdmins group.
 
