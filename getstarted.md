@@ -9,3 +9,5 @@ nav_order: 2
 **V7.0.0**
 
 - [Create an new Azure AD B2C tenant](./aadb2c.md)
+- [Add an API Connector to your Azure AD B2C Sign-up Page](./apiconnector.md)
+- [Create UserAdmins](./useradmin.md)
