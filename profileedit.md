@@ -24,8 +24,8 @@ You can manage user profile editing by using a **User Flow** in the AAD B2C tena
 
 - Add a name for the user flow and set the ``Local accounts`` to **Email sign in**
 
-    - For a Self Asserted Digital ID, you can use the name : ``profile-edit-sa``
-    - For a Verified Digital ID, you can use the name : ``profile-edit``
+    - For a Self Asserted Digital ID, you can use the name : ``profile_edit_sa``
+    - For a Verified Digital ID, you can use the name : ``profile_edit``
 
 ![image](/images/profileedit/userflow-add2.png)
 
