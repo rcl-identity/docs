@@ -18,7 +18,7 @@ The Digital ID can be :
 
 # Self Asserted Digital Identity
 
-In a **Self Asserted** Digital ID, the person will sign-up for a Digital ID and be immediately granted the ID once they have confirmed their email. The process of granting the ID is fully automated and does not require human intervention.
+In a **Self Asserted** Digital ID, the person will sign-up for a Digital ID and be immediately granted the ID once they have confirmed their email. The physical identity of the person is not independently verified.The process of granting the ID is fully automated and does not require human intervention.
 
 ## Identity Self Assertion
 
