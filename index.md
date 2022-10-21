@@ -18,7 +18,7 @@ The Digital ID can be :
 
 # Self Asserted Digital Identity
 
-In a **Self Asserted** Digital ID, the person will sign-up for a Digital ID and be immediately granted the ID once they have confirmed their email. The physical identity of the person is not independently verified.The process of granting the ID is fully automated and does not require human intervention.
+In a **Self Asserted** Digital ID, the person will sign-up for a Digital ID and be immediately granted the ID once they have confirmed their email. The physical identity of the person is not independently verified. The process of granting the ID is fully automated and does not require human intervention.
 
 ## Identity Self Assertion
 
@@ -74,7 +74,7 @@ In addition, multi-factor authentication utilizing the time-based one-time passw
 
 # User Claims
 
-The AAD B2C Identity Provider will send the ``User Claims`` identified previously in the [JWT](https://www.rfc-editor.org/rfc/rfc7519) tokens when a user signs in to a website. Using these claims, the relying parties to which the person signs in will have access the *Personally Identifiable Information* (PII). The relying party will use the PII to make decisions about the user (eg. whether to grant a service).
+The AAD B2C Identity Provider will send the ``User Claims`` in the [JWT](https://www.rfc-editor.org/rfc/rfc7519) tokens when a user signs in to a website. Using these claims, the relying parties to which the person signs in will have access to the *Personally Identifiable Information* (PII). The relying party will use the PII to make decisions about the user (eg. whether to grant a service).
 
 # Standards Compliance
 
