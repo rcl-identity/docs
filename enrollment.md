@@ -2,7 +2,7 @@
 title: Identity Enrollment
 description: Identity Enrollment for the RCL Digital Identity Application.
 has_children: false
-nav_order: 3
+nav_order: 4
 ---
 
 # Identity Enrollment
