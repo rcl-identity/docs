@@ -2,7 +2,7 @@
 title: Profile Editing
 description: Profile Editing for the RCL Digital Identity Application.
 has_children: false
-nav_order: 4
+nav_order: 10
 ---
 
 # Profile Editing
