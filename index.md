@@ -18,7 +18,7 @@ The **RCL Digital Identity** platform allows organizations to issue Digital Iden
 
 In a **Self Asserted** Digital ID, the person will sign-up for a Digital ID and be immediately granted the ID once they have confirmed their email. The process of granting the ID is fully automated and does not require human intervention.
 
-# Identity Self Assertion
+## Identity Self Assertion
 
 A person will apply to the organization for a Digital Identity using an online [Identity Self Assertion Application](https://github.com/rcladmin/RCL.Core/tree/master/src/RCL.Identity/RCL.Core.Identity.SelfAssertion) that the organization hosts. The applicant will provide their personal identification data and will verify their email address during the sign up process. The process follows the [NIST SP 800-63](https://nvlpubs.nist.gov/nistpubs/SpecialPublications/NIST.SP.800-63a.pdf) IAL1 Identity Assurance level. 
 

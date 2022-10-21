@@ -8,7 +8,7 @@ nav_order: 3
 # Create AAD B2C
 **V7.0.0**
 
-In this section, we will create an Azure Active Directory B2C tenant for the RCL Digital Identity application.
+In this section, we will create an Azure Active Directory B2C tenant for the RCL Digital Identity platform.
 
 # Create an Azure AD B2C tenant
 
@@ -66,13 +66,15 @@ Before an applications can interact with Azure AD B2C, it must be registered in 
 
 - Copy the value for the secret for configuration purposes
 
+    - Client Secret
+
 ![image](/images/aadb2c/app-registration6.png)
 
 # Access the Microsoft Graph
 
-The Microsoft Graph API provides programmatic access to AAD B2C users. We will configure the web application we created in the previous section to access the Microsoft Graph.
+The Microsoft Graph API provides programmatic access to manage AAD B2C *Users*. We will configure the web application we created previously to access the Microsoft Graph.
 
-- Open the AAD B2C tenant and open the web application
+- Open the AAD B2C tenant and then open the web application
 
 ![image](/images/aadb2c/ms-graph.png)
 
@@ -98,11 +100,15 @@ The Microsoft Graph API provides programmatic access to AAD B2C users. We will c
 
 ![image](/images/aadb2c/ms-graph6.png)
 
-# Adding Custom Attribute
+# Adding Custom Attributes for Verified Identity
 
-Azure AD B2C does not contain a Built-in attributes for **Date of Birth** and **Identity Approver**. The Identity Approver attribute can be used by the organization to manage the approval of a user sign up among several different departments or approvers. We will add these as custom attributes.
+> Custom Attributes are only required for [Verified Digital IDs](./index.md#verified-digital-identity). If you are issuing [Self Asserted Dogital IDs](./index.md#self-asserted-digital-identity), you can ignore this section.
 
-- Open the B2C tenant
+Azure AD B2C does not contain a *Built-in* attributes for **Date of Birth** and **Identity Approver**. 
+
+The *Identity Approver* attribute can be used by the organization to manage the approval of a Digital ID among several different departments, organizations or approvers. We will add these as approvers in our custom attribute.
+
+- Open the AAD B2C tenant
 
 - In the ``User attributes`` page, click the ``Add`` link 
 
@@ -124,6 +130,8 @@ Azure AD B2C does not contain a Built-in attributes for **Date of Birth** and **
 
 The sign up/ sign in workflow will allow the user to sign up for a Digital ID.
 
+> You should create separate user flows for Self Asserted and Verified Digital IDs. Both will have different user claims.
+
 - In the B2C tenant, open the ``User flows`` page
 
 - Click the ``New user flow`` link to create a user flow
@@ -134,11 +142,14 @@ The sign up/ sign in workflow will allow the user to sign up for a Digital ID.
 
 ![image](/images/aadb2c/userflow-add2.png)
 
-- Add a name for the user flow and select the ``Email signup`` identity provider
+- Add a name for the user flow 
+
+    - For a Self Asserted Digital ID, you can use the name : ``susi-sa``
+    - For a Verified Digital ID, you can use the name : ``susi``
 
 ![image](/images/aadb2c/userflow-add3.png)
 
-- Set the Multi-Factor Authentication (MFA) as follows:
+- Select the ``Email signup`` identity provider and set the Multi-Factor Authentication (MFA) as follows:
 
 ![image](/images/aadb2c/userflow-add4.png)
 
@@ -148,17 +159,20 @@ The sign up/ sign in workflow will allow the user to sign up for a Digital ID.
 
     - City
     - Country/Region
-    - Date of Birth
     - Display Name
     - Email Address
     - Email Addresses
     - Given Name
-    - Identity Approver
     - Postal Code
     - State/Province
     - Street Address
     - Surname
     - User's Object ID
+
+- *Additional Claims for the Verified Digital ID*
+
+    - Date of Birth
+    - Identity Approver
 
 ![image](/images/aadb2c/userflow-add5.png)
 
@@ -174,11 +188,11 @@ The sign up/ sign in workflow will allow the user to sign up for a Digital ID.
 
 ![image](/images/aadb2c/signup-layout.png)
 
-- Format the sign-up page user attributes as follows :
+- Format the sign-up page user attributes and their labels as follows or to your preferences:
 
 ![image](/images/aadb2c/signup-layout2.png)
 
-- Add the available Identity Approver(s) as a dropdown select
+- If you are issuing Verified Digital IDs, add each of the available Identity Approver(s) as a dropdown select assigning and text and value. We will use the **Value** property as the *Identity Approver Identifier* reference in the RCL Identity Platform APIs and open-source applications.
 
 ![image](/images/aadb2c/signup-layout6.png)
 

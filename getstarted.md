@@ -8,7 +8,13 @@ nav_order: 2
 # Getting Started
 **V7.0.0**
 
+## Self Asserted Digital Identity
+
 - [Create an new Azure AD B2C tenant](./aadb2c.md)
+
+
+## Verified Digital Identity
+
 - [Add an API Connector to your Azure AD B2C Sign-up Page](./apiconnector.md)
 - [Create UserAdmins](./useradmin.md)
 - [Set up an Identity Enrollment Application](./enrollment.md)
