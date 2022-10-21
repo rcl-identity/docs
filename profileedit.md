@@ -62,3 +62,17 @@ You can manage user profile editing by using a **User Flow** in the AAD B2C tena
 ![image](/images/profileedit/userflow-add4.png)
 
 You can now reference the user flow in your [Identity Self Assertion Application]() or [Identity Enrollment Application]() to allow users to edit their personal information data.
+
+# Customize the Profile Edit page
+
+- Open the user flow
+
+- In the ``Page layouts`` page, select the ``Profile edit page``
+
+![image](/images/profileedit/userflow-add5.png)
+
+- Format the profile edit page user attributes and their labels as follows or to your preferences:
+
+![image](/images/profileedit/userflow-add6.png)
+
+- Click the ``Save`` icon when you are done
