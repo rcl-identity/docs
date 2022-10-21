@@ -8,7 +8,9 @@ nav_order: 4
 # Identity Enrollment
 **V7.0.0**
 
-An applicant for a Digital ID must use the [AAD B2C Sign-up](aadb2c.md#customize-the-sign-up-page) page to register. The organization may develop it own web application to accomplish this. There is also the option for the organization to use the open-source Identity Enrollment application.
+> This section only applies to organizations issuing [Verified Digital IDs](./index.md#verified-digital-identity). You can ignore this section if your are issuing [Self Asserted Digital IDs](/index.md#self-asserted-digital-identity)
+
+An applicant for a Digital ID must use the [AAD B2C Sign-up](aadb2c.md#customize-the-sign-up-page) page to register. The organization may develop its own web application to accomplish this. There is also the option for the organization to use the open-source [Identity Enrollment Application]().
 
 # Enrollment URL and Instructions
 

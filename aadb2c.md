@@ -102,7 +102,7 @@ The Microsoft Graph API provides programmatic access to manage AAD B2C *Users*. 
 
 # Adding Custom Attributes for Verified Identity
 
-> Custom Attributes are only required for [Verified Digital IDs](./index.md#verified-digital-identity). If you are issuing [Self Asserted Dogital IDs](./index.md#self-asserted-digital-identity), you can ignore this section.
+> Custom Attributes are only required for [Verified Digital IDs](./index.md#verified-digital-identity). If you are issuing [Self Asserted Digital IDs](./index.md#self-asserted-digital-identity), you can ignore this section.
 
 Azure AD B2C does not contain a *Built-in* attributes for **Date of Birth** and **Identity Approver**. 
 
