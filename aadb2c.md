@@ -192,7 +192,7 @@ The sign up/ sign in workflow will allow the user to sign up for a Digital ID.
 
 ![image](/images/aadb2c/signup-layout2.png)
 
-- If you are issuing Verified Digital IDs, add each of the available Identity Approver(s) as a dropdown select assigning and text and value. We will use the **Value** property as the *Identity Approver Identifier* reference in the RCL Identity Platform APIs and open-source applications.
+- If you are issuing Verified Digital IDs, add each of the available Identity Approver(s) as a dropdown select assigning a *text* and *value* for the attribute. We will use the **Value** property as the *Identity Approver Identifier* reference in the RCL Identity Platform APIs and applications.
 
 ![image](/images/aadb2c/signup-layout6.png)
 
