@@ -8,11 +8,13 @@ nav_order: 1
 # Introduction
 **V7.0.0**
 
-The **RCL Digital Identity** platform allows organizations to issue Digital Identities to persons. The Digital ID can be :
+The **RCL Digital Identity** platform allows organizations to issue Digital Identities to people. A Digital Identity is a unique representation of a person carrying out an online transaction. In this context, a person holding a Digital ID has their *Personal Identifiable Information* (PII) stored with an *Identity Provider* (IdP). This IdP will provide the functionality for the person to sign-in to various websites and transmits their PII as claims to the website. The website can then use these claims to make a determination about the user (eg. whether to grant a service or not). 
 
-**Self Asserted** - Independent identity verification is not required
+The Digital ID can be :
 
-**Verified** - The identity of the person is verified by a process of *Identity Proofing*
+**Self Asserted** - independent physical identity verification of the person is not required
+
+**Verified** - the physical identity of the person is verified by a process of *Identity Proofing*
 
 # Self Asserted Digital Identity
 
@@ -76,7 +78,7 @@ The AAD B2C Identity Provider will send the ``User Claims`` identified previousl
 
 # Standards Compliance
 
-The RCL Identity platform are APIs built on Azure AD B2C and is complaint with the following standards :
+The RCL Identity platform are APIs built on Azure AD B2C and is compliant with the following standards :
 
 - [NIST SP 800-63 Digital Identity Guidelines](https://pages.nist.gov/800-63-3/)
 
