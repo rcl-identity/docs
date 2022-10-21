@@ -138,11 +138,11 @@ The sign up/ sign in workflow will allow the user to sign up for a Digital ID.
 
 ![image](/images/aadb2c/userflow-add.png)
 
-- Select the ``Sign up and sign in`` user flow and select the ``Recommended`` version
+- Select the ``Sign up and sign in`` user flow and select the ``Recommended`` version and click the ``Create`` button
 
 ![image](/images/aadb2c/userflow-add2.png)
 
-- Add a name for the user flow 
+- Add a name for the user flow and set the ``Local accounts`` to **Email sign in**
 
     - For a Self Asserted Digital ID, you can use the name : ``susi-sa``
     - For a Verified Digital ID, you can use the name : ``susi``
