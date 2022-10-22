@@ -37,6 +37,7 @@ You can manage user profile editing by using a **User Flow** in the AAD B2C tena
 
 - Add the following user attributes and claims :
 
+[TODO : FIX CLAIMS]
 - *Claims for Self Asserted Digital Identity*
 
     - City
