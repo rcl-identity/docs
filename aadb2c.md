@@ -8,7 +8,7 @@ nav_order: 3
 # Create AAD B2C
 **V7.0.0**
 
-In this section, we will create an Azure Active Directory B2C tenant for the RCL Digital Identity platform.
+In this section, we will create an Azure Active Directory B2C tenant for the RCL Digital Identity platform. The AAD B2C will be used to manage user data and act an an *Identity Provider* (IdP) to provide the functionality for users to sign-in to websites.
 
 # Create an Azure AD B2C tenant
 
@@ -40,12 +40,12 @@ Before an applications can interact with Azure AD B2C, it must be registered in 
 
 ![image](/images/aadb2c/app-registration.png)
 
-- Set the name of the app 
+- Set the name of the app and allow ``Accounts in any identity provider``
 
 ![image](/images/aadb2c/app-registration2.png)
 
 
-- In the ``Redirect URI``, select **Web** and set the URI to **https://jwt.ms** . We will use this URI for testing purposes.
+- In the ``Redirect URI``, select **Web** and set the URI to **https://jwt.ms** . We will use this temporary URI for testing purposes.
 
 ![image](/images/aadb2c/app-registration3.png)
 
@@ -144,8 +144,10 @@ The sign up/ sign in workflow will allow the user to sign up for a Digital ID.
 
 - Add a name for the user flow and set the ``Local accounts`` to **Email sign in**
 
-    - For a Self Asserted Digital ID, you can use the name : ``susi-sa``
     - For a Verified Digital ID, you can use the name : ``susi``
+
+    - For a Self Asserted Digital ID, you can use the name : ``susi_sa``
+
 
 ![image](/images/aadb2c/userflow-add3.png)
 
@@ -157,19 +159,22 @@ The sign up/ sign in workflow will allow the user to sign up for a Digital ID.
 
 - Add the following user attributes and claims :
 
-    - City
-    - Country/Region
-    - Display Name
+- *Mandatory attributes and claims*
+    - Given Name
+    - Surname
     - Email Address
     - Email Addresses
-    - Given Name
+    - Display Name
+    - User's Object ID
+
+- *Optional attributes and claims*
+    - City
+    - Country/Region
     - Postal Code
     - State/Province
     - Street Address
-    - Surname
-    - User's Object ID
 
-- *Additional Claims for the Verified Digital ID*
+- *Mandatory attributes and claims for the Verified Digital ID*
 
     - Date of Birth
     - Identity Approver
@@ -191,6 +196,8 @@ The sign up/ sign in workflow will allow the user to sign up for a Digital ID.
 - Format the sign-up page user attributes and their labels as follows or to your preferences:
 
 ![image](/images/aadb2c/signup-layout2.png)
+
+> This section is applicable to Verified Digital IDs only
 
 - If you are issuing Verified Digital IDs, add each of the available Identity Approver(s) as a dropdown select assigning a *text* and *value* for the attribute. We will use the **Value** property as the *Identity Approver Identifier* reference in the RCL Identity Platform APIs and applications.
 

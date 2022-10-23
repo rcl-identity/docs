@@ -10,9 +10,12 @@ nav_order: 2
 
 ## Verified Digital Identity
 
-- [Add an API Connector to your Azure AD B2C Sign-up Page](./apiconnector.md)
-- [Create UserAdmins](./useradmin.md)
-- [Set up an Identity Enrollment Application](./enrollment.md)
+Once you have subscribed for the **RCL Digital Identity SaaS Spplication** from the [Azure Marketplace]() follow these steps to start using the application for [Verified Digital ID](./index.md#verified-digital-identity).
+
+- [Create an Azure AD B2C tenant to manage user data](./aadb2c.md)
+- [Add an API Connector to your Azure AD B2C sign-up page](./apiconnector.md)
+- [Create UserAdmins to act as Identity Approvers](./useradmin.md)
+- [Set up an Identity Enrollment Application for users to apply for a Digital ID](./enrollment.md)
 
 ## Self Asserted Digital Identity
 
