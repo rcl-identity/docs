@@ -16,6 +16,8 @@ Once you have subscribed for the **RCL Digital Identity SaaS Spplication** from 
 - [Add an API Connector to your Azure AD B2C sign-up page](./apiconnector.md)
 - [Create UserAdmins to act as Identity Approvers](./useradmin.md)
 - [Set up an Identity Enrollment Application for users to apply for a Digital ID](./enrollment.md)
+- [Set up an Identity Proofing Application for Identity Approvers to approve a User Request for a Digital ID](./enrollment.md)
+- [Create a User Flow for a user to edit their Profile](./profileedit.md)
 
 ## Self Asserted Digital Identity
 
