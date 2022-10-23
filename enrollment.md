@@ -2,7 +2,7 @@
 title: Identity Enrollment
 description: Identity Enrollment for the RCL Digital Identity Application.
 has_children: false
-nav_order: 4
+nav_order: 5
 ---
 
 # Identity Enrollment
@@ -82,9 +82,13 @@ Set the instance in the configuration :
 
         - AzureAd:Instance
 
-In the [User Flow](./aadb2c#create-a-sign-insign-up-user-flow) you created for the Sign In Sign Up page, get the name of the User Flow (eg. B2C_1_susi). Use as the value for the configuration :
+In the [User Flow](./aadb2c#create-a-sign-insign-up-user-flow) you created for the Sign In Sign Up page, get the name of the User Flow (eg. B2C_1_susi). Use this as the value for the configuration :
 
         - AzureAd:SignUpSignInPolicyId
+
+Create a User Flow to [Edit a User Profile](./profileedit.md). Get the name of the User Flow (eg. B2C_1_profile_edit). Use this as the value for the configuration :
+
+        - AzureAd:EditProfilePolicyId
 
 Use the value of ``/signin-oidc`` for the configuration :
 
@@ -94,7 +98,7 @@ Use the value of ``/signout-callback-oidc`` for the configuration :
 
         - AzureAd:SignedOutCallbackPath
 
-Whe you are done with the configuration, open the web app to ensure it is up and running.
+When you are done with the configuration, open the web app to ensure it is up and running.
 
 ![image](/images/identityenrollment/configure3.png)
 
@@ -135,6 +139,10 @@ Whe you are done with the configuration, open the web app to ensure it is up and
 - Users can see the Security Groups that they belong to
 
 ![image](/images/identityenrollment/securitygroup.png)
+
+
+
+
 
 
 
