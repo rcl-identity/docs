@@ -61,7 +61,7 @@ The unique identifier for the person's Digital ID will be stored in the ``Object
 # Single Sign-On
 A person with a Digital Identity will utilize [Single Sign-On](https://learn.microsoft.com/en-us/azure/active-directory-b2c/custom-policy-reference-sso) provided by the AAD B2C IdP to sign in to multiple web sites using the same sign-in credentials.
 
-Single Sign-On is compliant with the [Open ID Connect](https://learn.microsoft.com/en-us/azure/active-directory-b2c/openid-connect) specification. Using Open ID, the Digital ID issuing organization can set up single sign-on on multiple regional and international websites it directly controls. 
+Single Sign-On is compliant with the [Open ID Connect](https://learn.microsoft.com/en-us/azure/active-directory-b2c/openid-connect) specification. Using Open ID Connect, the Digital ID issuing organization can set up single sign-on on multiple regional and international websites it directly controls. 
 
 It can also allow its partners and external organizations (*Relying Parties*) to use its AAD B2C as an *External Identity Provider* (External IdP) to sign in its users to external websites using the ``Authorized Code Grant`` type described in the [OAuth2](https://www.rfc-editor.org/rfc/rfc6749) specification.
 
@@ -74,11 +74,11 @@ In addition, multi-factor authentication utilizing the time-based one-time passw
 
 # Assertion and User Claims
 
-The AAD B2C Identity Provider (IdP) will send the ``User Claims`` in [JWT](https://www.rfc-editor.org/rfc/rfc7519) tokens as an *assertion* when a user signs in to a website (relying party). 
+The AAD B2C Identity Provider (IdP) will send the ``User Claims`` in [JWT](https://www.rfc-editor.org/rfc/rfc7519) tokens as an *assertion* when a user signs in to a website (relying party). The IdP and relying party will use the **Open ID Connect** federation protocol to communicate with each other.
 
-The IdP will sign the JWT with its private key. The relying party will verify the claims originated from the IdP by checking the JWT signature with the IdP's published public key. This follows [NIST SP 800-63](https://pages.nist.gov/800-63-3/) **FAL1** Federation Assurance level.  
+The IdP will sign the JWT with its private key. The relying party will verify the *user claims* originated from the IdP by checking the JWT signature with the IdP's published public key. This follows [NIST SP 800-63](https://pages.nist.gov/800-63-3/) **FAL1** Federation Assurance level.  
 
-Using these claims, the relying parties to which the person signs in will have access to the *Personally Identifiable Information* (PII). The relying party will use the PII to make decisions about the user (eg. whether to grant a service).
+Using these user claims, the relying parties to which the person signs in will have access to the *Personally Identifiable Information* (PII). The relying party will use the PII to make decisions about the user (eg. whether to grant a service).
 
 # Standards Compliance
 
