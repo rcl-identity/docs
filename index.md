@@ -72,9 +72,9 @@ The Digital ID issuing organization can set up single-factor authentication usin
 In addition, multi-factor authentication utilizing the time-based one-time password (TOTP) verification process is supported. This is done using an **Authenticator Application** (eg: Google Authenticator, Microsoft Authenticator). This follows [NIST SP 800-63](https://pages.nist.gov/800-63-3/) **AAL2** Authenticator Assurance level.
 
 
-# User Claims
+# Assertion and User Claims
 
-The AAD B2C Identity Provider (IdP) will send the ``User Claims`` in [JWT](https://www.rfc-editor.org/rfc/rfc7519) tokens when a user signs in to a website (relying party). 
+The AAD B2C Identity Provider (IdP) will send the ``User Claims`` in [JWT](https://www.rfc-editor.org/rfc/rfc7519) tokens as an *assertion* when a user signs in to a website (relying party). 
 
 The IdP will sign the JWT with its private key. The relying party will verify the claims originated from the IdP by checking the JWT signature with the IdP's published public key. This follows [NIST SP 800-63](https://pages.nist.gov/800-63-3/) **FAL1** Federation Assurance level.  
 
