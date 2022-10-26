@@ -102,6 +102,12 @@ Get the identifier for the [Identity Approver](./apiconnector.md#identity-approv
 
         - IdentityProofingApi:IdentityApproverIdentifier
 
+Get the [Security Group](./useradmin.md) name that contains your User Admins for this instance of the Identity Proofing application.
+
+Use the value for the configuration :
+
+        - SecurityGroup
+
 # Configure the AAD B2C App Registration
 
 - Open the [AAD B2C Application](./aadb2c.md#register-a-web-application) your registered for the B2C tenant

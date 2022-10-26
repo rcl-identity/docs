@@ -12,7 +12,7 @@ nav_order: 4
 
 A User Admin is a user account that has been assigned access to the [Identity Proofing Application]() to perform the identity verification process. In this section, we will learn how to create a *User* and add the user to the **UserAdmins** *Security Group*.
 
-# Create a UserAdmins Group
+# Create a Security Group
 
 The Azure AD B2C tenant does not allow the creation of ``Security Groups``. You will need to create the group in the underlying Azure AD tenant.
 
@@ -32,7 +32,7 @@ The Azure AD B2C tenant does not allow the creation of ``Security Groups``. You 
 
 ![image](/images/useradmin/group-add4.png)
 
-- Create a ``Security Group`` named **UserAdmins**
+- Create a ``Security Group`` named **UserAdmins** (you can choose another name based on your preference)
 
 ![image](/images/useradmin/group-add5.png)
 
@@ -64,13 +64,13 @@ In this section, we will create a user who will have access to the [Identity Pro
 
 ![image](/images/useradmin/user-add5.png)
 
-# Add the User to the UserAdmins Group
+# Add the User to the Security Group
 
 - Select the user and click on the ``Groups`` page
 
 ![image](/images/useradmin/user-group-add.png)
 
-- Click the ``Add membership`` link, then, choose the ``UserAdmins`` group
+- Click the ``Add membership`` link, then, choose the ``UserAdmins`` group (or other group name)
 
 ![image](/images/useradmin/user-group-add2.png)
 
@@ -79,7 +79,7 @@ In this section, we will create a user who will have access to the [Identity Pro
 
 ![image](/images/useradmin/user-group-add3.png)
 
-The user is now added to the UserAdmins group and can access the [Identity Proofing Application]() to verify the physical identity of persons signing up for a Digital ID.
+The user is now added to the Security Group and can access the [Identity Proofing Application]() to verify the physical identity of persons signing up for a Digital ID.
 
 **The user should be part of the [Identity Approver](aadb2c.md#customize-the-sign-up-page) organization, user or department.**
 
