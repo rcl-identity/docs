@@ -10,7 +10,7 @@ nav_order: 2
 
 ## Verified Digital Identity
 
-Once you have subscribed for the **RCL Digital Identity SaaS Spplication** from the [Azure Marketplace]() follow these steps to start using the application for [Verified Digital ID](./index.md#verified-digital-identity).
+Once you have subscribed for the **RCL Digital Identity SaaS Spplication** from the [Azure Marketplace](https://azuremarketplace.microsoft.com/en-us/marketplace/apps/rayconsulting.009?tab=Overview) follow these steps to start using the application for [Verified Digital ID](./index.md#verified-digital-identity).
 
 - [Create an Azure AD B2C tenant to manage user data](./aadb2c.md)
 - [Add an API Connector to your Azure AD B2C sign-up page](./apiconnector.md)
