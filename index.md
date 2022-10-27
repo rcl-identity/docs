@@ -22,15 +22,15 @@ In a **Self Asserted** Digital ID, the person will sign-up for a Digital ID and 
 
 ## Identity Self Assertion
 
-A person will apply to the *issuing organization* for a Digital Identity using an online [Identity Self Assertion Application](https://github.com/rcl-identity/RCL.Core.Identity.SelfAssertion) that the organization hosts. The applicant will provide their personal identification data and will verify their email address during the sign up process. The process follows the [NIST SP 800-63](https://pages.nist.gov/800-63-3/) IAL1 Identity Assurance level. 
+A person will apply to the *issuing organization* for a Digital Identity using an online [Identity Self Assertion Application](https://github.com/rcl-identity/RCL.Core.Identity.SelfAssertion) that the issuing organization hosts. The *applicant* will provide their personal identification data and will verify their email address during the sign up process. The process follows the [NIST SP 800-63](https://pages.nist.gov/800-63-3/) IAL1 Identity Assurance level. 
 
 # Verified Digital Identity
 
-In a **Verified** Digital ID, the person will *Enroll* for a Digital ID. The physical identity of the person must be verified by an *Identity Approver* in an *Identity Proofing* process. This process requires human intervention in granting the ID.
+In a **Verified** Digital ID, the *applicant* will *Enroll* for a Digital ID. The physical identity of the person must be verified by an *Identity Approver* in an *Identity Proofing* process. This process requires human intervention in granting the ID.
 
 ## Identity Enrollment
 
-A person will apply to the issuing organization for a Digital ID using an online [Identity Enrollment Application](https://github.com/rcl-identity/RCL.Core.Identity.Enrollment) that the organization hosts. The *applicant* will provide their personal identification data and will verify their email address during the sign up process. The identification data will be verified by an independent *Identity Approver* remotely or in-person. The process follows the [NIST SP 800-63](https://pages.nist.gov/800-63-3/) **IAL2** Identity Assurance level for remote verification and **IAL 3** for in-person verification. 
+An *applicant* will apply to the issuing organization for a Digital ID using an online [Identity Enrollment Application](https://github.com/rcl-identity/RCL.Core.Identity.Enrollment) that the organization hosts. The applicant will provide their personal identification data and will verify their email address during the sign up process. The identification data will be verified by an independent *Identity Approver* remotely or in-person. The process follows the [NIST SP 800-63](https://pages.nist.gov/800-63-3/) **IAL2** Identity Assurance level for remote verification and **IAL 3** for in-person verification. 
 
 ## Identity Proofing
 
@@ -61,7 +61,7 @@ The unique identifier for the person's Digital ID will be stored in the ``Object
 # Single Sign-On
 A person with a Digital Identity will utilize [Single Sign-On](https://learn.microsoft.com/en-us/azure/active-directory-b2c/custom-policy-reference-sso) provided by the AAD B2C IdP to sign in to multiple web sites using the same sign-in credentials.
 
-Single Sign-On is compliant with the [Open ID Connect](https://learn.microsoft.com/en-us/azure/active-directory-b2c/openid-connect) specification. Using Open ID Connect, the Digital ID issuing organization can set up single sign-on on multiple regional and international websites it directly controls. 
+Single Sign-On is accomplished using the [Open ID Connect](https://learn.microsoft.com/en-us/azure/active-directory-b2c/openid-connect) protocol. Using Open ID Connect, the Digital ID issuing organization can set up single sign-on on multiple regional and international websites it directly controls. 
 
 It can also allow its partners and external organizations (*Relying Parties*) use its AAD B2C as an *External Identity Provider* (External IdP) to sign in its users to external websites.
 
@@ -74,7 +74,7 @@ In addition, multi-factor authentication utilizing the time-based one-time passw
 
 # Assertion and User Claims
 
-The AAD B2C Identity Provider (IdP) will send the ``User Claims`` in [JWT](https://www.rfc-editor.org/rfc/rfc7519) tokens as an *assertion* when a user signs in to a website (relying party). The IdP and relying party will use the **Open ID Connect** federation protocol to communicate with each other.
+The AAD B2C Identity Provider (IdP) will send the ``User Claims`` in [JWT](https://www.rfc-editor.org/rfc/rfc7519) **id tokens as** an *assertion* when a user signs in to a website (relying party). The IdP and relying party will use the **Open ID Connect** protocol to communicate with each other.
 
 The IdP will sign the JWT with its private key. The relying party will verify that the *user claims* originated from the IdP by checking the JWT signature with the IdP's published public key. This follows [NIST SP 800-63](https://pages.nist.gov/800-63-3/) **FAL1** Federation Assurance level.  
 
@@ -86,13 +86,13 @@ The RCL Identity platform are APIs built on Azure AD B2C and is compliant with t
 
 - [NIST SP 800-63 Digital Identity Guidelines](https://pages.nist.gov/800-63-3/)
 
-- [Open ID Connect](https://openid.net/developers/specs/) for single sign-on and federation
+- [Open ID Connect](https://openid.net/developers/specs/) for single sign-on and authentication
 
 
-- [OAuth2 Authorization Framework](https://datatracker.ietf.org/doc/html/rfc6749) for single sign-on and federation
+- [OAuth2 Authorization Framework](https://datatracker.ietf.org/doc/html/rfc6749) for authorization
 
 
-- [SAML](http://saml.xml.org/saml-specifications) for single sign-on and federation
+- [SAML](http://saml.xml.org/saml-specifications) for single sign-on and authentication
 
 # Architecture and Applications
 
