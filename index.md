@@ -8,7 +8,7 @@ nav_order: 1
 # Introduction
 **V7.0.0**
 
-The **RCL Digital Identity** platform allows organizations and governments to issue Digital Identities to people. A Digital Identity is a unique representation of a person carrying out an online transaction. In this context, a person holding a Digital ID has their *Personal Identifiable Information* (PII) stored with an *Identity Provider* (IdP). This IdP will provide the functionality for the person to sign-in to various websites and transmits their PII as claims to the website. The website can then use these claims to make a determination about the user (eg. whether to grant a service or not). 
+The **RCL Digital Identity** platform allows organizations and governments to issue Digital Identities to people. A Digital Identity is a unique representation of a person carrying out an online transaction. In this context, a person holding a Digital ID has their *Personal Identifiable Information* (PII) stored with an *Identity Provider* (IdP). This IdP will provide the functionality for the person to sign-in to various websites (relying parties) and transmit their PII as claims to the relying party. The relying party can then use these claims to make a determination about the user (eg. whether to grant a service or not). 
 
 The Digital ID can be :
 
@@ -34,11 +34,11 @@ A person will apply to the issuing organization for a Digital ID using an online
 
 ## Identity Proofing
 
-Once the applicant has completed the sign up process, they will submit photo IDs (eg: National IDs, Drivers Permits, Passports) to verify their personal identification. An Identity Approver will review the photos and approve the Digital ID when the applicant's identity is physically verified. Identity proofing is carried out by the approver in the issuing organization using an online [Identity Proofing Application](https://github.com/rcladmin/RCL.Core/tree/master/src/RCL.Identity/RCL.Core.Identity.Proofing.Portal) hosted by the organization.
+Once the applicant has completed the sign up process, they will submit photo IDs (eg: National IDs, Drivers Permits, Passports) to verify their personal identification. An Identity Approver will review the photo IDs and approve the Digital ID once the applicant's identity is physically verified. Approval of a Digital ID is carried out by the approver in the issuing organization using an online [Identity Proofing Application](https://github.com/rcladmin/RCL.Core/tree/master/src/RCL.Identity/RCL.Core.Identity.Proofing.Portal) hosted by the organization.
 
 # Digital ID
 
-The person's Digital ID data will be managed in [Azure Active Directory B2C](https://learn.microsoft.com/en-us/azure/active-directory-b2c/overview) (AAD B2C) acting as an *Identity Provider (IdP)*. The issuing organization will subscribe for and control the AAD B2C tenant in their Azure subscription. The following ``User Claims`` are stored and issued by the IdP :
+The person's Digital ID data will be managed in [Azure Active Directory B2C](https://learn.microsoft.com/en-us/azure/active-directory-b2c/overview) (AAD B2C) acting as an *Identity Provider (IdP)*. The issuing organization will subscribe for and control the AAD B2C tenant in their Azure subscription. The following  PII is  stored and issued by the IdP as ``User Claims``:
 
 - Given Name
 - Surname
@@ -63,7 +63,7 @@ A person with a Digital Identity will utilize [Single Sign-On](https://learn.mic
 
 Single Sign-On is compliant with the [Open ID Connect](https://learn.microsoft.com/en-us/azure/active-directory-b2c/openid-connect) specification. Using Open ID Connect, the Digital ID issuing organization can set up single sign-on on multiple regional and international websites it directly controls. 
 
-It can also allow its partners and external organizations (*Relying Parties*) to use its AAD B2C as an *External Identity Provider* (External IdP) to sign in its users to external websites.
+It can also allow its partners and external organizations (*Relying Parties*) use its AAD B2C as an *External Identity Provider* (External IdP) to sign in its users to external websites.
 
 # Authentication
 
@@ -76,7 +76,7 @@ In addition, multi-factor authentication utilizing the time-based one-time passw
 
 The AAD B2C Identity Provider (IdP) will send the ``User Claims`` in [JWT](https://www.rfc-editor.org/rfc/rfc7519) tokens as an *assertion* when a user signs in to a website (relying party). The IdP and relying party will use the **Open ID Connect** federation protocol to communicate with each other.
 
-The IdP will sign the JWT with its private key. The relying party will verify the *user claims* originated from the IdP by checking the JWT signature with the IdP's published public key. This follows [NIST SP 800-63](https://pages.nist.gov/800-63-3/) **FAL1** Federation Assurance level.  
+The IdP will sign the JWT with its private key. The relying party will verify that the *user claims* originated from the IdP by checking the JWT signature with the IdP's published public key. This follows [NIST SP 800-63](https://pages.nist.gov/800-63-3/) **FAL1** Federation Assurance level.  
 
 Using these user claims, the relying parties to which the person signs in will have access to the *Personally Identifiable Information* (PII). The relying party will use the PII to make decisions about the user (eg. whether to grant a service).
 
