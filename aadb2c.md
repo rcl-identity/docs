@@ -178,7 +178,7 @@ The sign up/ sign in workflow will allow the user to sign up for a Digital ID.
     - State/Province
     - Street Address
     - Date of Birth
-    - Photo Url
+    - Photo Url (Claims only)
     - Identity Approver
 
 ![image](/images/aadb2c/userflow-add5.png)
