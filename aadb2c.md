@@ -122,6 +122,10 @@ The *Identity Approver* attribute can be used by the organization to manage the 
 
 ![image](/images/aadb2c/attribute-add4.png)
 
+- Add the **Photo Url** custom attribute 
+
+![image](/images/aadb2c/attribute-add5.png)
+
 - Click the ``Create`` button when you are done
 
 ![image](/images/aadb2c/attribute-add3.png)
@@ -160,23 +164,21 @@ The sign up/ sign in workflow will allow the user to sign up for a Digital ID.
 - Add the following user attributes and claims :
 
 - *Mandatory attributes and claims*
-    - Given Name
-    - Surname
     - Email Address
     - Email Addresses
     - Display Name
     - User's Object ID
 
-- *Optional attributes and claims*
+- *Mandatory attributes and claims for the Verified Digital ID*
+    - Given Name
+    - Surname
     - City
     - Country/Region
     - Postal Code
     - State/Province
     - Street Address
-
-- *Mandatory attributes and claims for the Verified Digital ID*
-
     - Date of Birth
+    - Photo Url
     - Identity Approver
 
 ![image](/images/aadb2c/userflow-add5.png)
