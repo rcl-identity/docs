@@ -104,7 +104,7 @@ The Microsoft Graph API provides programmatic access to manage AAD B2C *Users*. 
 
 > Custom Attributes are only required for [Verified Digital IDs](./index.md#verified-digital-identity). If you are issuing [Self Asserted Digital IDs](./index.md#self-asserted-digital-identity), you can ignore this section.
 
-Azure AD B2C does not contain a *Built-in* attributes for **Date of Birth** and **Identity Approver**. 
+Azure AD B2C does not contain a *Built-in* attributes for **Date of Birth**, **Identity Approver**, **Date Created** and **Photo Url**. 
 
 The *Identity Approver* attribute can be used by the organization to manage the approval of a Digital ID among several different departments, organizations or approvers. We will add these as approvers in our custom attribute.
 
@@ -125,6 +125,10 @@ The *Identity Approver* attribute can be used by the organization to manage the 
 - Add the **Photo Url** custom attribute 
 
 ![image](/images/aadb2c/attribute-add5.png)
+
+- Add the **Date Created** custom attribute 
+
+![image](/images/aadb2c/attribute-add6.png)
 
 - Click the ``Create`` button when you are done
 
@@ -179,6 +183,7 @@ The sign up/ sign in workflow will allow the user to sign up for a Digital ID.
     - Street Address
     - Date of Birth
     - Photo Url (Claims only)
+    - Date Created (Claims only)
     - Identity Approver
 
 ![image](/images/aadb2c/userflow-add5.png)
